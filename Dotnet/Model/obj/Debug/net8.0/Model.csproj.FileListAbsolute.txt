@@ -9,3 +9,4 @@
 /Users/shubhamjangid/Desktop/ClubFitness/Dotnet/Model/obj/Debug/net8.0/refint/Model.dll
 /Users/shubhamjangid/Desktop/ClubFitness/Dotnet/Model/obj/Debug/net8.0/Model.pdb
 /Users/shubhamjangid/Desktop/ClubFitness/Dotnet/Model/obj/Debug/net8.0/ref/Model.dll
+/Users/shubhamjangid/Desktop/ClubFitness/Dotnet/Model/obj/Debug/net8.0/Model.sourcelink.json
