@@ -25,12 +25,12 @@ namespace Data.Repository
 
         public async Task<Users?> GetByEmail(string email)
         {
-            return await context.Users.FirstOrDefaultAsync(x => x.Email == email);
+            return await context.Users.Include(it => it.Role).FirstOrDefaultAsync(x => x.Email == email);
         }
 
         public async Task<Users?> GetByEmailOrPhoneAndPassword(string emailOrPhone, string password)
         {
-            return await context.Users.FirstOrDefaultAsync(x => (x.Email == emailOrPhone || x.PhoneNumber == emailOrPhone) && x.Password == password);
+            return await context.Users.Include(it => it.Role).FirstOrDefaultAsync(x => (x.Email == emailOrPhone || x.PhoneNumber == emailOrPhone) && x.Password == password);
         }
     }
 }
