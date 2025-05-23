@@ -7,5 +7,6 @@ namespace Service.Interface
     {
         Task<ApiResponse> Create(CreateUserRequest dto);
         Task<ApiResponse> Login(LoginRequest dto);
+        Task<ApiResponse> GetUserProfile(string email);
     }
 }

@@ -49,7 +49,7 @@ namespace Service
                 {
                     return new ApiResponse().BadRequestResponse("Failed to create user");
                 }
-                return new ApiResponse().CreatedResponse(mapper.Map<UserResponse>(createdUser));
+                return new ApiResponse().CreatedResponse(mapper.Map<UserResponse>(await userRepository.GetByEmail(dto.Email)));
             }
             catch (Exception ex)
             {
@@ -70,6 +70,23 @@ namespace Service
                 if (user == null)
                 {
                     return new ApiResponse().BadRequestResponse("Invalid credentials");
+                }
+                return new ApiResponse().SucessResponse(mapper.Map<UserResponse>(user));
+            }
+            catch (Exception ex)
+            {
+                return new ApiResponse().InternalServerErrorResponse(ex.Message);
+            }
+        }
+
+        public async Task<ApiResponse> GetUserProfile(string email)
+        {
+            try
+            {
+                var user = await userRepository.GetByEmail(email);
+                if (user == null)
+                {
+                    return new ApiResponse().NotFoundResponse("User not found");
                 }
                 return new ApiResponse().SucessResponse(mapper.Map<UserResponse>(user));
             }

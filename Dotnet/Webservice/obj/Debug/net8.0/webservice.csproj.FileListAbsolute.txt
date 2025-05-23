@@ -77,3 +77,4 @@
 /Users/shubhamjangid/Desktop/ClubFitness/Dotnet/Webservice/bin/Debug/net8.0/Data.pdb
 /Users/shubhamjangid/Desktop/ClubFitness/Dotnet/Webservice/obj/Debug/net8.0/webservice.sourcelink.json
 /Users/shubhamjangid/Desktop/ClubFitness/Dotnet/Webservice/bin/Debug/net8.0/AutoMapper.dll
+/Users/shubhamjangid/Desktop/ClubFitness/Dotnet/Webservice/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll

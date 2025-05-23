@@ -12,6 +12,6 @@ namespace Data.Repository
 
         //Resgiter tables
         public DbSet<Users> Users { get; set; }
-        public DbSet<Role> Roles { get; set; }
+        public DbSet<Role> Role { get; set; }
     }
 }
